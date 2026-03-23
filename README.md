@@ -60,6 +60,33 @@ ln -s ~/.minimax-skills/skills/* ~/.config/opencode/skills/
 
 Restart OpenCode to discover the skills. See [`.opencode/INSTALL.md`](.opencode/INSTALL.md) for details.
 
+### OpenHands
+
+**Option 1: Using `/add-skill` command**
+
+Use the built-in `/add-skill` command to import skills directly from GitHub:
+
+```
+/add-skill https://github.com/MiniMax-AI/skills
+```
+
+Or to add a specific skill:
+
+```
+/add-skill https://github.com/MiniMax-AI/skills/tree/main/skills/frontend-dev
+```
+
+**Option 2: Manual installation**
+
+```bash
+git clone https://github.com/MiniMax-AI/skills.git ~/.minimax-skills
+
+mkdir -p ~/.agents/skills
+ln -s ~/.minimax-skills/skills ~/.agents/skills/minimax-skills
+```
+
+Restart OpenHands to discover the skills. See [`.openhands/INSTALL.md`](.openhands/INSTALL.md) for details.
+
 ## License
 
 [MIT](./LICENSE)
